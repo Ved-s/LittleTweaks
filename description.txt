@@ -1,0 +1,1 @@
+Little tweaks and patches adds few features from 1.4 like using Ctrl in inventory moves item to trash or shop, Shift only moves to chest and ruler that available from start.
