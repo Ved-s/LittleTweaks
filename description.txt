@@ -2,6 +2,9 @@ This mod adds a few little features to Terraria.
 Some of them inspired by version 1.4.
 Everything is configurable.
 
- - using Ctrl in inventory moves item to trash or shop, Shift only moves to chest
- - ruler is available any time
- - dynamic camera (inspired by dynamic camera option in Terraria Overhaul)
+[v0.1] - using Ctrl in inventory moves item to trash or shop, Shift only moves to chest
+       - ruler is available any time
+[v0.2] - dynamic camera (inspired by dynamic camera option in Terraria Overhaul)
+[v0.3] - chest switcher (hotkeys to switch to left/right chest from currently opened)
+
+ 
