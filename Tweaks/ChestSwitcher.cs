@@ -12,7 +12,7 @@ namespace LittleTweaks.Tweaks
         public static void Init() 
         {
             HotKeys.Hotkeys.Add(LittleTweaks.Instance.RegisterHotKey("Switch Chest Left", "OemComma"), (p) => SwitchChest(p,false));
-            HotKeys.Hotkeys.Add(LittleTweaks.Instance.RegisterHotKey("Switch Chest Right", "OemPoint"), (p) => SwitchChest(p, true));
+            HotKeys.Hotkeys.Add(LittleTweaks.Instance.RegisterHotKey("Switch Chest Right", "OemPeriod"), (p) => SwitchChest(p, true));
         }
 
         public static void SwitchChest(Player p, bool dirRight)
