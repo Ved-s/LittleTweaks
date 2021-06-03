@@ -7,9 +7,7 @@ namespace LittleTweaks
     {
         public override void UpdateEquips(ref bool wallSpeedBuff, ref bool tileSpeedBuff, ref bool tileRangeBuff)
         {
-            TweaksConfig config = ModContent.GetInstance<TweaksConfig>();
-
-            if (config.RulerAlwaysEnabled) player.rulerLine = true;
+            Tweaks.Ruler.Tweak(player);
         }
     }
 }

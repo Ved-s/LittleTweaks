@@ -1,1 +1,7 @@
-Little tweaks and patches adds few features from 1.4 like using Ctrl in inventory moves item to trash or shop, Shift only moves to chest and ruler that available from start.
+This mod adds a few little features to Terraria.
+Some of them inspired by version 1.4.
+Everything is configurable.
+
+ - using Ctrl in inventory moves item to trash or shop, Shift only moves to chest
+ - ruler is available any time
+ - dynamic camera (inspired by dynamic camera option in Terraria Overhaul)

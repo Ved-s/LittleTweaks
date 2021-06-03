@@ -9,9 +9,9 @@ using Terraria.ModLoader;
 using Terraria.UI;
 using Terraria.ID;
 
-namespace LittleTweaks
+namespace LittleTweaks.Tweaks
 {
-    static class CtrlShiftTweak
+    static class CtrlShift
     {
         
         public static bool Enabled { get; private set; }
