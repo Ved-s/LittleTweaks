@@ -14,7 +14,10 @@ namespace LittleTweaks
 
         [Tooltip("Enable/disable dynamic camera offset (moving cursor affects camera position)")]
         public bool DynamicCameraEnabled  { get => Tweaks.DynamicCamera.Enabled; set => Tweaks.DynamicCamera.Enable(value); }
-        
+
+        [Tooltip("Enable/disable shift-right-click on item to take half amount")]
+        public bool HalfStackEnabled { get => Tweaks.HalfStack.Enabled; set => Tweaks.HalfStack.Enable(value); }
+
         [Range(1,80)]
         [Tooltip("Defines how much camera will be offsetted, works a bit different with Smooth Camera from OriMod")]
         public int DynamicCameraValue     { get => Tweaks.DynamicCamera.Value;   set => Tweaks.DynamicCamera.Value = value; }
@@ -27,6 +30,7 @@ namespace LittleTweaks
             CtrlShiftTweakEnabled = true;
             RulerAlwaysEnabled = true;
             DynamicCameraEnabled = false;
+            HalfStackEnabled = true;
             DynamicCameraValue = 4;
         }
 
