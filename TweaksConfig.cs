@@ -34,5 +34,13 @@ namespace LittleTweaks
             DynamicCameraValue = 4;
         }
 
+        public void Unload() 
+        {
+            CtrlShiftTweakEnabled = false;
+            RulerAlwaysEnabled    = false;
+            DynamicCameraEnabled  = false;
+            HalfStackEnabled      = false;
+        }
+
     }
 }

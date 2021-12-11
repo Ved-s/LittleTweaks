@@ -6,5 +6,8 @@ Everything is configurable.
        - ruler is available any time
 [v0.2] - dynamic camera (inspired by dynamic camera option in Terraria Overhaul)
 [v0.3] - chest switcher (hotkeys to switch to left/right chest from currently opened)
+[v0.4] - added Shift-Right-Click on item slot to take half
+[v0.5] - fixed mod unload
+[v0.6] - fixed crash when Dynamic Camera is either enabled or set to zero
 
  

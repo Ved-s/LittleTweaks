@@ -17,6 +17,12 @@ namespace LittleTweaks
             Hotkeys = new Dictionary<ModHotKey, Action<Player>>();
         }
 
+        public static void Unload() 
+        {
+            Hotkeys.Clear();
+        }
+
+
         public static void CheckTriggers(Player p) 
         {
             foreach (KeyValuePair<ModHotKey, Action<Player>> kvp in Hotkeys)

@@ -41,7 +41,7 @@ namespace LittleTweaks.Tweaks
 		private static void ItemSlot_OverrideHover(On.Terraria.UI.ItemSlot.orig_OverrideHover orig, Terraria.Item[] inv, int context, int slot)
         {
 			Item item = inv[slot];
-			if (ItemSlot.ShiftInUse && item.type > 0 && item.stack > 0 && !inv[slot].favorited)
+			if (ItemSlot.ShiftInUse && item.type > ItemID.None && item.stack > 0 && !inv[slot].favorited)
 			{
 				switch (context)
 				{
@@ -81,7 +81,7 @@ namespace LittleTweaks.Tweaks
 						break;
 				}
 			}
-			if (IsCtrlPressed() && item.type > 0 && item.stack > 0 && !inv[slot].favorited) 
+			if (IsCtrlPressed() && item.type > ItemID.None && item.stack > 0 && !inv[slot].favorited) 
 			{
 				if (context < 3) 
 				{
@@ -97,12 +97,12 @@ namespace LittleTweaks.Tweaks
 			}
 			if (Main.keyState.IsKeyDown(Main.FavoriteKey) && context < 3)
 			{
-				if (item.type > 0 && item.stack > 0 && Main.drawingPlayerChat)
+				if (item.type > ItemID.None && item.stack > 0 && Main.drawingPlayerChat)
 				{
 					Main.cursorOverride = 2;
 					return;
 				}
-				if (item.type > 0 && item.stack > 0)
+				if (item.type > ItemID.None && item.stack > 0)
 				{
 					Main.cursorOverride = 3;
 				}
@@ -122,7 +122,7 @@ namespace LittleTweaks.Tweaks
 		public static void SellOrTrash(Item[] inv, int context, int slot)
 		{
 			Player player = Main.player[Main.myPlayer];
-			if (inv[slot].type <= 0)
+			if (inv[slot].type <= ItemID.None)
 			{
 				return;
 			}
@@ -135,7 +135,7 @@ namespace LittleTweaks.Tweaks
 					{
 						int num = chest.AddShop(inv[slot]);
 						inv[slot].SetDefaults(0, false);
-						Main.PlaySound(18, -1, -1, 1, 1f, 0f);
+						Main.PlaySound(SoundID.Coins, -1, -1, 1, 1f, 0f);
 						Recipe.FindRecipes();
 						PlayerHooks.PostSellItem(player, Main.npc[player.talkNPC], chest.item, chest.item[num]);
 						return;
@@ -144,7 +144,7 @@ namespace LittleTweaks.Tweaks
 					{
 						int num2 = chest.AddShop(inv[slot]);
 						inv[slot].SetDefaults(0, false);
-						Main.PlaySound(7, -1, -1, 1, 1f, 0f);
+						Main.PlaySound(SoundID.Grab, -1, -1, 1, 1f, 0f);
 						Recipe.FindRecipes();
 						PlayerHooks.PostSellItem(player, Main.npc[player.talkNPC], chest.item, chest.item[num2]);
 						return;
@@ -153,7 +153,7 @@ namespace LittleTweaks.Tweaks
 			}
 			else if (!inv[slot].favorited && !ItemSlot.Options.DisableLeftShiftTrashCan)
 			{
-				Main.PlaySound(7, -1, -1, 1, 1f, 0f);
+				Main.PlaySound(SoundID.Grab, -1, -1, 1, 1f, 0f);
 				player.trashItem = inv[slot].Clone();
 				inv[slot].SetDefaults(0, false);
 				if (context == 3 && Main.netMode == NetmodeID.MultiplayerClient)

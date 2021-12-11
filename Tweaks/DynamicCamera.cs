@@ -21,8 +21,13 @@ namespace LittleTweaks.Tweaks
 
         private static void Main_ClampScreenPositionToWorld(On.Terraria.Main.orig_ClampScreenPositionToWorld orig)
         {
-            Main.screenPosition.X = (int)(Main.screenPosition.X + (Main.mouseX - (Main.screenWidth  / 2)) / Value);
-            Main.screenPosition.Y = (int)(Main.screenPosition.Y + (Main.mouseY - (Main.screenHeight / 2)) / Value);
+            if (Enabled && Value > 0) 
+            {
+                Main.screenPosition.X = (int)(Main.screenPosition.X + (Main.mouseX - (Main.screenWidth / 2)) / Value);
+                Main.screenPosition.Y = (int)(Main.screenPosition.Y + (Main.mouseY - (Main.screenHeight / 2)) / Value);
+            }
+            orig();
+            
         }
     }
 }

@@ -15,6 +15,12 @@ namespace LittleTweaks
             HotKeys.Init();
             Tweaks.ChestSwitcher.Init();
         }
+
+        public override void Unload()
+        {
+            TweaksConfig.Instance.Unload();
+            HotKeys.Unload();
+        }
     }
     
 }
