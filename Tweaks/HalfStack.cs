@@ -10,6 +10,9 @@ namespace LittleTweaks.Tweaks
 
         public static void Enable(bool state)
         {
+            if (state == Enabled)
+                return;
+
             Enabled = state;
             if (state)
             {
